@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* 루트레이아웃 */}
+        {/* 아직 넣을것 없음 */}
         {children}
       </body>
     </html>

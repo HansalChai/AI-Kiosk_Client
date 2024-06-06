@@ -1,0 +1,58 @@
+.
+├── README.md
+├── next-env.d.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── public
+│   ├── LOGO_1.svg
+│   ├── eatin.svg
+│   ├── fonts
+│   │   ├── NanumSquareOTF_acB.otf
+│   │   ├── NanumSquareOTF_acEB.otf
+│   │   ├── NanumSquareOTF_acL.otf
+│   │   └── NanumSquareOTF_acR.otf
+│   ├── goback.svg
+│   ├── next.svg
+│   ├── togo.svg
+│   └── vercel.svg
+├── src
+│   └── app
+│       ├── (after ai cam)
+│       │   ├── complex
+│       │   │   ├── [item]
+│       │   │   │   └── page.tsx
+│       │   │   ├── menu
+│       │   │   │   ├── beverage
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── bread
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── cafe
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── cake
+│       │   │   │   │   └── page.tsx
+│       │   │   │   ├── layout.module.css
+│       │   │   │   ├── layout.tsx
+│       │   │   │   ├── recommend
+│       │   │   │   │   └── page.tsx
+│       │   │   │   └── tea
+│       │   │   │       └── page.tsx
+│       │   │   └── pay
+│       │   │       └── page.tsx
+│       │   └── simple
+│       │       ├── layout.tsx
+│       │       └── page.tsx
+│       ├── (before ai cam)
+│       │   └── home
+│       │       ├── page.module.css
+│       │       └── page.tsx
+│       ├── favicon.ico
+│       ├── globals.css
+│       ├── layout.tsx
+│       ├── not-fount.tsx
+│       ├── page.module.css
+│       └── page.tsx
+├── tree.txt
+└── tsconfig.json
+
+19 directories, 37 files

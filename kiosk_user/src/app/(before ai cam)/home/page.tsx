@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/app/page.module.css";
+import styles from "./page.module.css";
 import dineInIcon from "@/../public/eatin.svg";
 import takeOutIcon from "@/../public/togo.svg";
 import Link from "next/link";
@@ -17,7 +17,7 @@ export default function Home() {
         <div className={styles.text1}>먹고가기</div>
       </Link>
       
-      <Link href="/complex" className={styles.option} id={styles.takeOut}>
+      <Link href="/complex/menu/recommend" className={styles.option} id={styles.takeOut}>
         <div className={styles.icon}>
           <Image src={takeOutIcon} alt="포장하기" className={styles.homeicon}/>
         </div>
