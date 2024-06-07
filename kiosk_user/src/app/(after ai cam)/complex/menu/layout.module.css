@@ -1,19 +1,27 @@
+/* src/app/(after ai cam)/complex/menu/layout.module.css */
+
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding:3dvw;
+    /* border-bottom: 0; */
     width: 94dvw;
     height: 94dvh;
-    background-color: #DEE5E2; 
+    background-color: #DEE5E2;
+    overflow: hidden; /* 전체 컨테이너의 스크롤 숨김 */ 
   }
   
   .header {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     background-color: white;
     padding: 20px 20px;
-    border-radius: 20px 20px 0 0; /* Rounded top corners */
+    border-radius: 20px 20px 0 0;
+    position: sticky; /* 헤더를 고정 */
+    top: 0;
+    z-index: 1000; /* 헤더가 메인 컨텐츠 위에 있도록 z-index 설정 */
   }
   
   .goback{
@@ -37,19 +45,21 @@
   }
   
   .maincontent {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1 1 auto;
+    overflow-y: auto; /* 메인 컨텐츠에만 스크롤 허용 */
   }
 
   .footer {
+    flex: 0 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #9D9D9D; /* Darker grey background */
     border-radius: 0 0 20px 20px; /* Rounded bottom corners */
     color: white;
+    position: sticky; /* 푸터를 고정 */
+    bottom: 0;
+    z-index: 1000; /* 푸터가 메인 컨텐츠 위에 있도록 z-index 설정 */
   }
   
   .quantity{

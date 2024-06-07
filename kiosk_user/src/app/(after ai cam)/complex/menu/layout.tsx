@@ -1,3 +1,5 @@
+/* src/app/(after ai cam)/complex/menu/layout.tsx */
+
 import { ReactNode } from "react";
 import styles from "./layout.module.css";
 import Image from "next/image";
@@ -6,10 +8,14 @@ import Link from "next/link";
 
 
 export default async function ComplexMenuLayout({children} : {children : ReactNode}){
+
   return(
     <div className={styles.container}>
+
       <div className={styles.header}>
-        <Image src={goback} alt="뒤로가기" className={styles.goback}/>
+        <Link href="/home">
+          <Image src={goback} alt="뒤로가기" className={styles.goback}/> 
+        </Link>
         <div className={styles.nav}>
           <Link href="/complex/menu/recommend" className={styles.lk}>추천</Link>
           <Link href="/complex/menu/cafe" className={styles.lk}>카페</Link>
@@ -19,9 +25,11 @@ export default async function ComplexMenuLayout({children} : {children : ReactNo
           <Link href="/complex/menu/cake" className={styles.lk}>케이크</Link>
         </div>
       </div>
+      
       <div className={styles.maincontent}>
         {children}
       </div>
+      
       <div className={styles.footer}>
         <div className={styles.quantity}>
           <div>수량</div>
@@ -33,6 +41,7 @@ export default async function ComplexMenuLayout({children} : {children : ReactNo
         </div>
         <div className={styles.paybutton}>결제</div>
       </div>
+    
     </div>
   )
 }
