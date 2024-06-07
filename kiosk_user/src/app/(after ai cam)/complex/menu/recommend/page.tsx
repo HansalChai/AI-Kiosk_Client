@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 import coffee1 from "@/../public/sample/coffee1.svg"
 import coffee2 from "@/../public/sample/coffee2.svg"
@@ -14,14 +15,16 @@ export default function Complex() {
   return (
     <div className={styles.grid}>
       
-      <div className={`${styles.card} ${styles.large}`}>
-        {/* <Image src={coffee1} alt="coffee1" className={styles.bigimage}/> */}
-        <div className={styles.bigimagewrap}></div>
-        <div className={styles.biginfo}>
-          <div className={styles.biginfoname}>아이스 블렌디드 (ICE) 아메리카노</div>
-          <div className={styles.biginfoprice}>3500원</div>
+      <Link href="/complex/item/americano">
+        <div className={`${styles.card} ${styles.large}`}>
+          {/* <Image src={coffee1} alt="coffee1" className={styles.bigimage}/> */}
+          <div className={styles.bigimagewrap}></div>
+          <div className={styles.biginfo}>
+            <div className={styles.biginfoname}>아이스 블렌디드 (ICE) 아메리카노</div>
+            <div className={styles.biginfoprice}>3500원</div>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className={styles.card}>
         <div className={styles.imagewrap}></div>
