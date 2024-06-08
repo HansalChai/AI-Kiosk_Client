@@ -19,13 +19,13 @@ export default function Complex() {
           <div className={styles.option}>HOT</div>
         </div>
         <div className={styles.radioGroup}>
-          <div className={styles.radioLabel}>사이즈 업</div>
+          <div className={styles.radioLabel}>사이즈</div>
           <div className={styles.radioButtons}>
             <label className={styles.radioButton}>
-              <input type="radio" name="size" value="yes" /> 예
+              <input type="radio" name="size" value="yes" /> M
             </label>
             <label className={styles.radioButton}>
-              <input type="radio" name="size" value="no" /> 아니오
+              <input type="radio" name="size" value="no" /> L
             </label>
             <span>+500</span>
           </div>
