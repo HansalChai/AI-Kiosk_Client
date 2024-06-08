@@ -68,6 +68,10 @@
     height: 21dvh;
     border-radius: 2.5dvw;
   }
+  
+  .bigimagewrap1{
+    background-color: #0E492D;
+  }
 
   .biginfo{
     display: flex;

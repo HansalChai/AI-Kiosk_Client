@@ -39,9 +39,10 @@ export default async function ComplexMenuLayout({children} : {children : ReactNo
           <div>합계</div>
           <div>45,000원</div>
         </div>
-        <div className={styles.paybutton}>결제</div>
+        <Link href='/complex/cart' className={styles.paybutton}>
+          주문
+        </Link>
       </div>
-    
     </div>
   )
 }

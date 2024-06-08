@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10dvh 10dvw;
+    background-color: #E0E6E5;
+    height: 80%;
+  }
+  
+  .closeButton {
+    background-color: white;
+    border: 4px solid #0E492D;
+    border-radius: 50%;
+    width: 5dvw;
+    height: 5dvw;
+    font-size: 5dvw;
+    font-weight: bold;
+    color: #0E492D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+  }
+  
+  .content {
+    background-color: white;
+    width: 70dvw;
+    margin-top: 30px; /* Adjust based on the height of the close button */
+    /* padding: 20px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image {
+    background-color: #0E492D;
+    height: 23dvh;
+  }
+  
+  .title {
+    font-size: 3.5dvw;
+    font-weight: bold;
+    margin: 2dvh 6dvw;
+  }
+  
+  .description {
+    font-size: 2dvw;
+    line-height: 1.3;
+    color: gray;
+    margin: 0 6vw;
+    padding-right: 7dvw;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5dvh 8dvw;
+  }
+  
+  .option {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5dvw;
+    background-color: #CCC;
+    color: black;
+    font-size: 2dvw;
+  }
+
+  .option.selected {
+    background-color: #E2B281;
+    color: white;
+  }
+  
+
+
+
+  .radioGroup {
+    background-color: #E6E6E6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3dvh 6dvw;
+    border-bottom: 3px solid #C9C9C9;
+    font-size: 3dvw;
+    font-weight: bold;
+  }
+  
+  .radioLabel {
+    flex: 1;
+  }
+  
+  .radioButtons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .radioButton {
+    margin: 0 3dvw;
+
+    display: flex;
+    align-items: center;
+  }
+  
+  .radioButton input {
+    margin-right: 5px;
+  }
+  
+  .orderButton {
+    background-color: #0E492D;
+    color: white;
+    padding: 2dvh 3dvw;
+    text-align: center;
+    font-size: 4dvw;
+    cursor: pointer;
+  }
+  

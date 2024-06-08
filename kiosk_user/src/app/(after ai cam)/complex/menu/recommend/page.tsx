@@ -18,7 +18,7 @@ export default function Complex() {
       <Link href="/complex/item/americano">
         <div className={`${styles.card} ${styles.large}`}>
           {/* <Image src={coffee1} alt="coffee1" className={styles.bigimage}/> */}
-          <div className={styles.bigimagewrap}></div>
+          <div className={`${styles.bigimagewrap} ${styles.bigimagewrap1}`}></div>
           <div className={styles.biginfo}>
             <div className={styles.biginfoname}>아이스 블렌디드 (ICE) 아메리카노</div>
             <div className={styles.biginfoprice}>3500원</div>
