@@ -18,7 +18,6 @@ const AdminHome = () => {
     try {
       const response = await login(username, password);
       setToken(response.access);
-      console.log(response.access);
       setError("");
       router.push("/admin/main");
     } catch (error) {

@@ -32,6 +32,10 @@ const AdminMain = () => {
   };
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setToken(token);
+    }
     getAdmin();
   }, []);
 
@@ -44,56 +48,31 @@ const AdminMain = () => {
           </OwnerNameRound>
         </OwnerNameDiv>
         <OwnerDiv>
-          {" "}
-          <Name> {name}님 환영합니다.</Name>
+          <Name>{name}님 환영합니다.</Name>
         </OwnerDiv>
       </NameDiv>
       <ButtonContainer>
         <ButtonBox>
-          <Button
-            style={{
-              background: "#E2B281",
-            }}
-          >
+          <Button style={{ background: "#E2B281" }}>
             <Link href="/admin/menu">메뉴 정보 설정</Link>
           </Button>
-          <Button
-            style={{
-              background: "#E2B281",
-            }}
-          >
+          <Button style={{ background: "#E2B281" }}>
             <Link href="/admin/order">화면 정보 설정</Link>
           </Button>
         </ButtonBox>
         <ButtonBox>
-          <Button
-            style={{
-              background: "#0E492D",
-            }}
-          >
+          <Button style={{ background: "#0E492D" }}>
             <Link href="/admin/statistics">메뉴 설정</Link>
           </Button>
-          <Button
-            style={{
-              background: "#0E492D",
-            }}
-          >
+          <Button style={{ background: "#0E492D" }}>
             <Link href="/admin/logout">추천 메뉴 설정 및 조회</Link>
           </Button>
         </ButtonBox>
         <ButtonBox>
-          <Button
-            style={{
-              background: "#5AA381",
-            }}
-          >
+          <Button style={{ background: "#5AA381" }}>
             <Link href="/admin/owner">메뉴 조회</Link>
           </Button>
-          <Button
-            style={{
-              background: "#5AA381",
-            }}
-          >
+          <Button style={{ background: "#5AA381" }}>
             <Link href="/admin/owner">멤버십 관리</Link>
           </Button>
         </ButtonBox>
@@ -117,6 +96,7 @@ const AdminMain = () => {
     </Container>
   );
 };
+
 export default AdminMain;
 
 const Container = styled.div`
