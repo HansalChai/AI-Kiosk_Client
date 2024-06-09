@@ -57,7 +57,7 @@ const AdminMain = () => {
             <Link href="/admin/menu">메뉴 정보 설정</Link>
           </Button>
           <Button style={{ background: "#E2B281" }}>
-            <Link href="/admin/order">화면 정보 설정</Link>
+            <Link href="/admin/mode">화면 정보 설정</Link>
           </Button>
         </ButtonBox>
         <ButtonBox>
