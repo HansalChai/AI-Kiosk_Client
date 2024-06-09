@@ -1,7 +1,7 @@
 /* src/app/(after ai cam)/complex/menu/recommend/page.module.css */
 
   .grid {
-    padding: 3dvw;
+    padding: 3dvh 1dvw;
     display: flex;
     flex-wrap: wrap;
     gap: 2dvw;
