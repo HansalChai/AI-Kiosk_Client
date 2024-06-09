@@ -2,31 +2,61 @@
 
 import styled from "styled-components";
 import Link from "next/link";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { login } from "@/apis/auth";
+import { setToken } from "@/apis/apiClient";
 
-export const adminHome = () => {
+const AdminHome = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const router = useRouter();
+
+  const handleLogin = async () => {
+    try {
+      const response = await login(username, password);
+      setToken(response.access);
+      console.log(response.access);
+      setError("");
+      router.push("/admin/main");
+    } catch (error) {
+      setError("로그인에 실패했습니다. 다시 시도해주세요.");
+      console.error("실패:", error);
+    }
+  };
+
   return (
     <Container>
       <ImgBox />
       <InputBox>
-        <InputText>아아디</InputText>
+        <InputText>아이디</InputText>
         <InputDesign>
-          <Input type="text" />
+          <Input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </InputDesign>
       </InputBox>
       <InputBox>
         <InputText>비밀번호</InputText>
         <InputDesign>
-          <Input type="password" />
+          <Input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </InputDesign>
       </InputBox>
-      <Button>
-        <Link href="/admin/main">로그인</Link>
-      </Button>
+      <Button onClick={handleLogin}>로그인</Button>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
     </Container>
   );
 };
 
-export default adminHome;
+export default AdminHome;
 
 const Container = styled.div`
   display: flex;
@@ -94,4 +124,10 @@ const Button = styled.button`
   &:hover {
     background-color: #0e492d;
   }
+`;
+
+const ErrorMessage = styled.p`
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
 `;

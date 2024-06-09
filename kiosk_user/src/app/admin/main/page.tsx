@@ -2,8 +2,39 @@
 
 import styled from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { logout, getAdminInfo } from "@/apis/auth";
+import { setToken } from "@/apis/apiClient";
+import { useEffect, useState } from "react";
 
-export const adminMain = () => {
+const AdminMain = () => {
+  const router = useRouter();
+  const [name, setName] = useState("");
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      setToken("");
+      alert("로그아웃 되었습니다.");
+      router.push("/admin/home");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
+
+  const getAdmin = async () => {
+    try {
+      const response = await getAdminInfo();
+      setName(response.name);
+    } catch (error) {
+      console.error("Failed to get admin info:", error);
+    }
+  };
+
+  useEffect(() => {
+    getAdmin();
+  }, []);
+
   return (
     <Container>
       <NameDiv>
@@ -14,7 +45,7 @@ export const adminMain = () => {
         </OwnerNameDiv>
         <OwnerDiv>
           {" "}
-          <Name>최재원 님 환영합니다.</Name>
+          <Name> {name}님 환영합니다.</Name>
         </OwnerDiv>
       </NameDiv>
       <ButtonContainer>
@@ -79,13 +110,14 @@ export const adminMain = () => {
           width: "320px",
           height: "50px",
         }}
+        onClick={handleLogout}
       >
         로그아웃
       </button>
     </Container>
   );
 };
-export default adminMain;
+export default AdminMain;
 
 const Container = styled.div`
   display: flex;
