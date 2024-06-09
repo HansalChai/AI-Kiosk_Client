@@ -1,4 +1,3 @@
-/* payment.module.css */
 .container {
     display: flex;
     flex-direction: column;
@@ -8,3 +7,67 @@
     height: 76dvh;
   }
   
+
+  .header {
+    text-align: center;
+    line-height: 1.3;
+    font-size: 7dvw;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .header span {
+    color: #4F7E68;
+  }
+
+
+  .section{
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .errorment {
+    font-size: 2.5dvw;
+    color: #919191;
+    font-weight: bold;
+    margin-top: 3dvh;
+  }
+
+  .cardsvg {
+    margin-bottom: 5dvh;
+  }
+
+  .total {
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3.5dvw;
+    width: 77dvw;
+    padding: 4dvw 0;
+    /* margin: 0 2dvw; */
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .total span {
+    color: #4F7E68;
+    font-size: 4.5dvw;
+  }
+
+  .cancel {
+    background-color: #4F7E68;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 5dvw;
+    font-size: bold;
+    width: 77dvw;
+    border-radius: 0 0 50px 50px;
+    padding: 4dvw 0;
+    cursor: pointer;
+  }

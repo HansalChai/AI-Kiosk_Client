@@ -35,6 +35,7 @@
     font-size: 5dvw;
     font-weight: bold;
     color: #8C5115; /* 텍스트 색상 */
+    line-height: 1.2;
   }
   
   .text2 {
@@ -43,7 +44,9 @@
     color: #182723; /* 텍스트 색상 */
   }
   
-  @media (max-width: 768px) {
+
+  
+  /* @media (max-width: 768px) {
     .container {
       flex-direction: column;
     }
@@ -52,4 +55,4 @@
       width: 100%;
       height: 50%;
     }
-  }
+  } */
