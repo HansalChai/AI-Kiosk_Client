@@ -62,7 +62,7 @@ const AdminMain = () => {
         </ButtonBox>
         <ButtonBox>
           <Button style={{ background: "#0E492D" }}>
-            <Link href="/admin/statistics">메뉴 설정</Link>
+            <Link href="/admin/category">표시 카테고리 및 메뉴 설정</Link>
           </Button>
           <Button style={{ background: "#0E492D" }}>
             <Link href="/admin/logout">추천 메뉴 설정 및 조회</Link>

@@ -19,7 +19,6 @@ export default function Home() {
     setUploadResponse(response);
     setIsLoading(false);
 
-    // Set href based on age
     if (response.age === "48-53" || response.age === "60-100") {
       router.push("/simple/menu/recommend");
     } else {
@@ -73,18 +72,4 @@ const WebcamWrapper = styled.div`
   width: 100%;
   height: 100%;
   z-index: -1;
-`;
-
-const LoadingMessage = styled.div`
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: blue;
-`;
-
-const ResponseMessage = styled.div`
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: green;
 `;

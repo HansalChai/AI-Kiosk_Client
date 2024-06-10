@@ -84,7 +84,7 @@ const AdminCategory = () => {
       </Header>
       <CategoryList>
         <CategoryListHeader>
-          <CategoryListHeaderRound>카테고리 관리</CategoryListHeaderRound>
+          <CategoryListHeaderRound>카테고리</CategoryListHeaderRound>
         </CategoryListHeader>
         {category.length > 0 ? (
           category.map((cat, index) => (
@@ -288,17 +288,19 @@ const CategoryListHeader = styled.div`
   display: flex;
   justify-content: left;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+  color: #0e492d;
 `;
 
 const CategoryListHeaderRound = styled.div`
-  width: 40px;
-  height: 50px;
-  backgroung-color: #5aa381;
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
   border-radius: 5px;
-  opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #5aa381;
+  opacity: 0.8;
 `;

@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/apis/auth";
 import { setToken } from "@/apis/apiClient";
@@ -14,17 +14,28 @@ const AdminHome = () => {
 
   const router = useRouter();
 
+  const tokenInitialized = async () => {
+    setToken("");
+  };
+
   const handleLogin = async () => {
     try {
       const response = await login(username, password);
       setToken(response.access);
       setError("");
       router.push("/admin/main");
-    } catch (error) {
+    } catch (error: any) {
       setError("로그인에 실패했습니다. 다시 시도해주세요.");
-      console.error("실패:", error);
+      console.error(
+        "실패:",
+        error.response ? error.response.data : error.message
+      );
     }
   };
+
+  useEffect(() => {
+    tokenInitialized();
+  }, []);
 
   return (
     <Container>
