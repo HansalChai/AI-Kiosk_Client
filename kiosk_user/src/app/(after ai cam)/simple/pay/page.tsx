@@ -30,31 +30,7 @@ export default function Complex() {
         </div>
       </div>
 
-      <div className={styles.section}>
-        <div className={styles.sectionTitle}>주문내역</div>
-        <div className={styles.orderSummary}>
-          <div className={styles.orderItem}>
-            <div>(ICE) 아이스 블렌디드 아메리카노</div>
-            <div>
-              1 &emsp;
-              2,600
-            </div>
-          </div>
-          <div className={styles.orderItem}>
-            <div>(ICE) 선비의 정신</div>
-            <div>
-              1 &emsp;
-              7,500
-            </div>
-          </div>
-          <div className={styles.orderItem}>
-            <div>딸깍밥이 스페셜 블렌딩</div>
-            <div>
-              1 &emsp;
-              6,800
-            </div>
-          </div>
-        </div>
+      <div className={styles.section}>          
         <div className={styles.total}>
           <div>총 주문금액</div>
           <div>16,900</div>

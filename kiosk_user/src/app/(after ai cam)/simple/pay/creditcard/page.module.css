@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 12dvh 10dvw;
-    background-color: #DEE5E2;
+    /* background-color: #DEE5E2; */
     height: 76dvh;
   }
   
@@ -67,7 +67,6 @@
     font-size: 5dvw;
     font-size: bold;
     width: 77dvw;
-    border-radius: 0 0 50px 50px;
     padding: 4dvw 0;
     cursor: pointer;
   }
