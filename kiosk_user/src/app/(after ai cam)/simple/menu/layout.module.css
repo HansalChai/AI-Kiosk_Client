@@ -1,0 +1,113 @@
+/* styles.css */
+.main {
+    margin: 0;
+    background-color: #F5F5F5;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 86dvh;
+    padding: 7dvh 0 10dvh 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6F6F6;
+    color: #504C45;
+    padding: 20px;
+  }
+  
+  .homeButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .homeButton img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .homeButtonText {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 0 0 30px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F6F6F6;
+    color: #504C45;
+    padding: 10px;
+    align-items: center;
+  }
+  
+  .navButton {
+    flex: 1;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .navButton img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .mainContent {
+    flex: 1 1 auto;
+    overflow-y: auto; /* 메인 컨텐츠에만 스크롤 허용 */
+  }
+  
+
+  
+  .footer {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6F6F6;
+    color: #504C45;
+  }
+  
+  .summary {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    height: 215px;
+  }
+  
+  .summaryCount {
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    height: 215px;
+  }
+  
+  .summaryPrice {
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+    height: 215px;
+  }
+  
+  .orderButton {
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    background-color: #4F7E68;
+    color: #F6F6F6;
+    font-size: 70px;
+    width: 200px;
+    height: 215px;
+  }
+  
+  .orderButton:hover {
+    background-color: #0E492D;
+  }
+  

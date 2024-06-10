@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15dvh 10dvw;
+    background-color: white;
+    height: 70dvh;
+  }
+  
+
+.title {
+  font-size: 8dvw;
+  color: #4F7E68;
+  font-weight: bold;
+  margin-bottom: 7dvh;
+}
+
+.order {
+  font-size: 6dvw;
+  font-weight: bold;
+  margin-bottom: 1dvh;
+}
+
+.orderNum {
+  font-size: 13dvw;
+  color: #4F7E68;
+  margin-bottom: 3dvh;
+}
+
+.recieptment {
+  font-size: 3dvw;
+  color: #919191;
+  margin-bottom: 7dvh;
+}

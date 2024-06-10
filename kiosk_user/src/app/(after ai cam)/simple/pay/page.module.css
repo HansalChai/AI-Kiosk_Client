@@ -1,0 +1,140 @@
+/* payment.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12dvh 10dvw;
+    background-color: #DEE5E2;
+    height: 76dvh;
+  }
+  
+  .header {
+    font-size: 5dvw;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .section {
+    background-color: white;
+    border-radius: 10px;
+    width: 65dvw;
+    padding: 2dvh 6dvw;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sectionTitle {
+    font-size: 2.5dvw;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .paymentMethods,
+  .discountOptions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3dvh;
+  }
+  
+  .method, .kakaopay {
+    text-align: center;
+    background-color: #4F7E68;
+    color: white;
+    font-size: 2.2dvw;
+    font-weight: bold;
+    border-radius: 2dvw;
+    padding: 0 0 2dvw 0;
+    width: 13dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .kakaopay{
+    color: black;
+    background-color: #FFDD5B;
+  }
+
+
+  .discount {
+    background-color: #F0F0F0;
+    border-radius: 2dvw;
+    padding: 10px;
+    width: 26%;
+    height: 5dvh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.2dvw;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+
+  .brown {
+    background-color: #E2B281;
+  }
+  
+  
+
+
+
+  .orderSummary {
+    width: 100%;
+    font-size: 1.7dvw;
+  }
+  
+  .orderItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .orderItem:last-child {
+    border-bottom: none;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5dvw;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-top: 1.5dvh;
+  }
+  
+
+
+
+
+
+  .finalAmount {
+    text-align: center;
+    color: white;
+    font-size: 4dvw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 77dvw;
+  }
+  
+  .cancel {
+    background-color: #4F7E68;
+    width: 30%;
+    border-radius: 0 0 0 30px;
+    padding: 4dvw;
+    cursor: pointer;
+  }
+  
+  .amount {
+      background-color: #0E492D;
+      width: 70%;
+      padding: 4dvw;
+      border-radius: 0 0 30px 0;
+      cursor: pointer;
+  }
+  

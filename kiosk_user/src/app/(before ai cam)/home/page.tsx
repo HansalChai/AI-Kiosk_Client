@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       
-      <Link href="/simple" className={styles.option} id={styles.dineIn}>
+      <Link href="/simple/menu/recommend" className={styles.option} id={styles.dineIn}>
         <div className={styles.icon}>
           <Image src={dineInIcon} alt="매장에서 먹고가기" className={styles.homeicon}/>
         </div>
