@@ -13,10 +13,10 @@ export default async function SimpleLayout({children} : {children : ReactNode}){
     <div className={styles.main}>
       <div className={styles.container}>
           <div className={styles.header}>
-              <div className={styles.homeButton}>
+              <Link href='/home' className={styles.homeButton}>
                   <Image src={homeIcon} alt="home"/>
                   <div className={styles.homeButtonText}>처음으로</div>
-              </div>
+              </Link>
               <div className={styles.logo}>
                   <Image src={logo} alt="logo"/>
               </div>

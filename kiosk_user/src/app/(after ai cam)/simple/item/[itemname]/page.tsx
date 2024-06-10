@@ -1,16 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
+import goback from "@/../public/goback.svg";
 import homeIcon from "@/../public/home-icon.png"
 import logo from "@/../public/logo.png"
 import star from "@/../public/star.png"
-import Link from "next/link";
 
 export default function Simple() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-      <div className={styles.header}>
+        <Link href="/simple/menu/recommend">
+          <Image src={goback} alt="뒤로가기" className={styles.goback}/> 
+        </Link>
+        <div className={styles.header}>
         <div className={styles.menuName}>아메리카노</div>
         <div className={styles.menuExplanation}>(쓴 커피)</div>
       </div>
