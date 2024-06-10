@@ -57,7 +57,12 @@ export default function Home() {
 
       <div className={styles.option} id={styles.takeOut} onClick={handleClick}>
         <div className={styles.icon}>
-          <Image src={takeOutIcon} alt="포장하기" className={styles.homeicon} />
+          <Image 
+            src={takeOutIcon}
+            alt="포장하기"
+            className={styles.homeicon}
+            priority
+          />
         </div>
         <div className={styles.text2}>포장하기</div>
       </div>
