@@ -37,3 +37,20 @@ export const deleteCategory = async (category_id: number) => {
     throw error;
   }
 };
+
+export const updateCategory = async (
+  category_id: number,
+  category_name: string
+) => {
+  try {
+    const response = await apiClient.patch(`/api/categories/${category_id}/`, {
+      category_name,
+    });
+    alert("카테고리가 수정되었습니다 !");
+    return response.data;
+  } catch (error) {
+    alert("카테고리 수정에 실패했습니다. 다시 시도해주세요.");
+    console.error("카테고리 수정 실패: ", error);
+    throw error;
+  }
+};
