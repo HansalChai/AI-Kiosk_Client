@@ -22,4 +22,16 @@ if (token) {
   setToken(token);
 }
 
+apiClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      setToken("");
+      alert("세션이 만료되었습니다. 다시 로그인해주세요.");
+      window.location.href = "/admin/home"; // 페이지 리디렉트
+    }
+    return Promise.reject(error);
+  }
+);
+
 export default apiClient;
