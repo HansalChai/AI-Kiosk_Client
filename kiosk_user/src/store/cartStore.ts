@@ -1,5 +1,5 @@
 // src/store/cartStore.ts
-import create from 'zustand';
+import { create } from 'zustand';
 
 interface CartItem {
   name: string;
