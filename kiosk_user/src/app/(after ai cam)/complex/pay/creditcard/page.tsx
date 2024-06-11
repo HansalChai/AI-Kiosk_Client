@@ -9,16 +9,14 @@ import styles from "./page.module.css";
 
 import cardinsert from "@/../public/cardinsert.svg"
 
+import useCartStore from '@/store/cartStore';
+
 export default function Complex() {
 
-  const router = useRouter();
+  const items = useCartStore((state) => state.items);
+  const totalPrice = items.reduce((total, item) => total + item.price, 0);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     router.push('/complex/pay/complete'); // 이동하고자 하는 페이지 경로
-  //   }, 3000); // 3초 후에 이동
-  //   return () => clearTimeout(timer); // 컴포넌트가 언마운트될 때 타이머를 정리합니다.
-  // }, [router]);
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -37,7 +35,7 @@ export default function Complex() {
         <Image src={cardinsert} alt="cardlogo" className={styles.cardsvg}></Image>
         <div className={styles.total}>
             <div>총 결제금액</div>
-            <div><span>16,900</span> 원</div>
+            <div><span>{totalPrice.toLocaleString()}</span> 원</div>
         </div>
         <Link href="/complex/pay" className={styles.cancel}>결제 취소</Link>
       </div>

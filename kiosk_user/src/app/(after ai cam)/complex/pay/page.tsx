@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -5,7 +7,16 @@ import styles from "./page.module.css";
 import card from "@/../public/Credit Card.svg"
 import kakaopay from "@/../public/kakaopay.svg"
 
+import useCartStore from "@/store/cartStore";
+
 export default function Complex() {
+
+  const items = useCartStore((state) => state.items);
+
+  const totalPrice = items.reduce((total, item) => total + item.price, 0);
+  const discountPrice = 0
+  const finalPrice = totalPrice - discountPrice
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>결제하기</div>
@@ -31,7 +42,7 @@ export default function Complex() {
       </div>
 
       <div className={styles.section}>
-        <div className={styles.sectionTitle}>주문내역</div>
+        {/* <div className={styles.sectionTitle}>주문내역</div>
         <div className={styles.orderSummary}>
           <div className={styles.orderItem}>
             <div>(ICE) 아이스 블렌디드 아메리카노</div>
@@ -54,24 +65,24 @@ export default function Complex() {
               6,800
             </div>
           </div>
-        </div>
+        </div> */}
         <div className={styles.total}>
           <div>총 주문금액</div>
-          <div>16,900</div>
+          <div>{totalPrice.toLocaleString()}</div>
         </div>
         <div className={styles.total}>
           <div>할인금액</div>
-          <div>-4,000</div>
+          <div>{discountPrice.toLocaleString()}</div>
         </div>
         <div className={styles.total}>
           <div>최종결제금액</div>
-          <div>12,900</div>
+          <div>{finalPrice.toLocaleString()}</div>
         </div>
       </div>
 
       <div className={styles.finalAmount}>
         <Link href="/complex/cart" className={styles.cancel}>취소</Link>
-        <Link href="/complex/pay/creditcard" className={styles.amount}>12,900원 결제하기</Link>
+        <Link href="/complex/pay/creditcard" className={styles.amount}>{finalPrice.toLocaleString()}원 결제하기</Link>
       </div>
     </div>
   );

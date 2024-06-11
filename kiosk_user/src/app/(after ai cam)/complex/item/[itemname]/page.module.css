@@ -75,34 +75,33 @@
 
 
   .radioGroup {
-    background-color: #E6E6E6;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 3dvh 6dvw;
-    border-bottom: 3px solid #C9C9C9;
-    font-size: 3dvw;
+    padding: 3dvh 4dvw;
+    border-bottom: solid gray 0.5px;
+    font-size: 2.8dvw;
     font-weight: bold;
   }
   
   .radioLabel {
-    flex: 1;
+    flex: 0 0 27dvw; /* 라벨의 고정 너비를 설정하여 정렬을 쉽게 합니다 */
   }
   
   .radioButtons {
     display: flex;
+    flex: 1;
     align-items: center;
   }
   
   .radioButton {
-    margin: 0 3dvw;
-
-    display: flex;
-    align-items: center;
+    width: 10dvw;
+    margin-right: 5dvw; /* 각 라디오 버튼 간의 간격을 설정합니다 */
   }
   
-  .radioButton input {
-    margin-right: 5px;
+  .extraCharge {
+    flex: 0 0 50px; /* 추가 요금의 고정 너비를 설정하여 정렬을 쉽게 합니다 */
+    text-align: right; /* 오른쪽 정렬 */
   }
   
   .orderButton {

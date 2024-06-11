@@ -3,9 +3,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 import goback from "@/../public/goback.svg";
-import homeIcon from "@/../public/home-icon.png"
-import logo from "@/../public/logo.png"
-import star from "@/../public/star.png"
+
 
 export default function Simple() {
   return (

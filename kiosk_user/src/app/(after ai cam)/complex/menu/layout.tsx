@@ -6,6 +6,7 @@ import Image from "next/image";
 import goback from "@/../public/goback.svg";
 import Link from "next/link";
 import NavMenu from "./_components/NavMenu";
+import FooterCart from "./_components/FooterCart";
 
 
 export default async function ComplexMenuLayout({children} : {children : ReactNode}){
@@ -25,14 +26,7 @@ export default async function ComplexMenuLayout({children} : {children : ReactNo
       </div>
       
       <div className={styles.footer}>
-        <div className={styles.quantity}>
-          <div>수량</div>
-          <div>6개</div>
-        </div>
-        <div className={styles.total}>
-          <div>합계</div>
-          <div>45,000원</div>
-        </div>
+        <FooterCart/>
         <Link href='/complex/cart' className={styles.paybutton}>
           주문
         </Link>
