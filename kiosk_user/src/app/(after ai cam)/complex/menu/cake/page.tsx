@@ -3,12 +3,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-import coffee1 from "@/../public/sample/coffee1.svg"
-import coffee2 from "@/../public/sample/coffee2.svg"
-import coffee3 from "@/../public/sample/coffee3.svg"
-import coffee4 from "@/../public/sample/coffee4.svg"
-import coffee5 from "@/../public/sample/coffee5.svg"
-
 
 export default function Complex() {
   return (

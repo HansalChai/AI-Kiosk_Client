@@ -8,6 +8,7 @@ import { useRouter, useParams } from "next/navigation";
 import useCartStore from "@/store/cartStore";
 import { dummyItems } from "@/data/dummyItems"; // 더미 데이터 가져오기
 
+
 interface SelectedOptions {
   [key: string]: string;
 }
@@ -62,7 +63,9 @@ export default function Complex() {
         <div className={styles.closeButton}>×</div>
       </Link>
       <div className={styles.content}>
-        <div className={styles.image}></div>
+        <div className={styles.image}>
+          <Image src={item.image} alt={item.name} className={styles.img} width={500} height={500}/>
+        </div>
         <div className={styles.title}>{item.name}</div>
         <div className={styles.description}>{item.description}</div>
         {item.options.map((option, index) => (
