@@ -37,6 +37,7 @@ const AdminOptions = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const categoryId = searchParams.get("category_id");
+  const categoryName = searchParams.get("category_name");
 
   useEffect(() => {
     if (categoryId) {
@@ -112,9 +113,12 @@ const AdminOptions = () => {
   return (
     <Container>
       <Header onClick={() => router.push("/admin/category")}>
-        ← 옵션 관리
+        ← {categoryName} 옵션 관리
       </Header>
       <OptionList>
+        <OptionListHeader>
+          <OptionListHeaderRound>옵션 목록</OptionListHeaderRound>
+        </OptionListHeader>
         {options.length > 0 ? (
           options.map((option) => (
             <OptionItem key={option.id}>
@@ -194,7 +198,16 @@ const AdminOptions = () => {
             </OptionItem>
           ))
         ) : (
-          <div>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+              color: "#666",
+            }}
+          >
             옵션이 존재하지 않습니다! 옵션을 추가하고 싶으시다면 새로운 옵션을
             아래에서 추가해주세요.
           </div>
@@ -268,6 +281,7 @@ const OptionList = styled.div`
 const OptionItem = styled.li`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ccc;
@@ -346,7 +360,8 @@ const UpdateButton = styled.div`
 
 const OptionInputDiv = styled.div`
   width: 80%;
-  height: 300px;
+  height: 500px;
+  overflow-y: auto;
   display: flex;
   background-color: #ffffff;
   flex-direction: column;
@@ -366,3 +381,39 @@ const Header = styled.div`
   margin-top: 10px;
   cursor: pointer;
 `;
+
+const OptionListHeader = styled.div`
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0e492d;
+`;
+
+const OptionListHeaderRound = styled.div`
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5aa381;
+  opacity: 0.8;
+`;
+
+{
+  /* <div
+style={{
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  textAlign: "center",
+  color: "#666",
+}}
+> */
+}
