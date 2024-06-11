@@ -9,6 +9,7 @@ import {
   updateCategory,
 } from "@/apis/owner";
 import { setToken } from "@/apis/apiClient";
+import { useRouter } from "next/navigation";
 
 const AdminCategory = () => {
   interface Category {
@@ -23,6 +24,7 @@ const AdminCategory = () => {
     id: number;
     name: string;
   } | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -77,9 +79,15 @@ const AdminCategory = () => {
     }
   };
 
+  const handleMenuManagement = (categoryId: number, categoryName: string) => {
+    router.push(
+      `/admin/menu?category_id=${categoryId}&category_name=${categoryName}`
+    );
+  };
+
   return (
     <Container>
-      <Header>
+      <Header onClick={() => router.push("/admin/main/")}>
         <h1>← 카테고리 관리</h1>
       </Header>
       <CategoryList>
@@ -119,7 +127,13 @@ const AdminCategory = () => {
                   />
                 )}
                 <DeleteButton onClick={() => handleDeleteCategory(cat.id)} />
-                <MenuButton>메뉴 관리</MenuButton>
+                <MenuButton
+                  onClick={() =>
+                    handleMenuManagement(cat.id, cat.category_name)
+                  }
+                >
+                  메뉴 관리
+                </MenuButton>
               </ButtonContainer>
             </CategoryItem>
           ))
@@ -162,7 +176,7 @@ const Container = styled.div`
 const CategoryItem = styled.div<{ isFirst: boolean }>`
   display: flex;
   align-items: center;
-  width: 200px;
+  width: 240px;
   justify-content: space-between;
   height: 50px;
   padding: 5px;
@@ -181,7 +195,7 @@ const Input = styled.input`
 
 const CategoryUpdateInput = styled.input`
   padding: 10px;
-  width: 100px;
+  width: 70px;
   border: 1px solid #ccc;
   border-radius: 5px;
 `;
@@ -226,7 +240,7 @@ const UpdateButton = styled.div`
 
 const SubmitButton = styled.button`
   margin-left: 10px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background-color: #d9d9d9;
   color: #000000;
   border: none;
