@@ -2,16 +2,14 @@
 export const dummyComplexCafe = [
     //커피
     {
-      itemname: "iceamericano",
-      name: "(ICE) 아이스 블렌디드 아메리카노",
-      description: "진한 에스프레소에 시원한 정수물과 얼음을 더하여 깔끔하고 강렬한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피",
-      price: 3500,
-      image: "/dummyImg/coffee1.svg",
-      options: [
-        { label: "사이즈", values: ["M", "L"], price: [0, 500] },
-        { label: "에스프레소 샷", values: ["1샷", "2샷"], price: [-200, 0] },
-        { label: "얼음 양", values: ["보통", "많이"], price: [0, 0] },
-      ],
+        itemname: "espresso",
+        name: "에스프레소",
+        description: "진한 에스프레소 샷 한 잔, 깊고 강렬한 커피의 풍미를 느낄 수 있는 음료",
+        price: 3000,
+        image: "/dummyImg/coffee6.jpeg",
+        options: [
+            { label: "사이즈", values: ["S", "D"], price: [0, 500] },
+        ],
     },
     {
         itemname: "cafelatte",
@@ -57,15 +55,17 @@ export const dummyComplexCafe = [
         ],
     },
     {
-        itemname: "espresso",
-        name: "에스프레소",
-        description: "진한 에스프레소 샷 한 잔, 깊고 강렬한 커피의 풍미를 느낄 수 있는 음료",
-        price: 3000,
-        image: "/dummyImg/coffee6.jpeg",
+        itemname: "iceamericano",
+        name: "(ICE) 아이스 블렌디드 아메리카노",
+        description: "진한 에스프레소에 시원한 정수물과 얼음을 더하여 깔끔하고 강렬한 에스프레소를 가장 부드럽고 시원하게 즐길 수 있는 커피",
+        price: 3500,
+        image: "/dummyImg/coffee1.svg",
         options: [
-            { label: "사이즈", values: ["S", "D"], price: [0, 500] },
+          { label: "사이즈", values: ["M", "L"], price: [0, 500] },
+          { label: "에스프레소 샷", values: ["1샷", "2샷"], price: [-200, 0] },
+          { label: "얼음 양", values: ["보통", "많이"], price: [0, 0] },
         ],
-    },
+      },
     {
         itemname: "cappuccino",
         name: "카푸치노",

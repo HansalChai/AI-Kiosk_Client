@@ -1,103 +1,118 @@
-/* src/app/(after ai cam)/complex/menu/recommend/page.module.css */
+/* src/app/(after ai cam)/complex/menu/beverage/page.module.css */
 
-  .grid {
-    padding: 3dvh 1dvw;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2dvw;
-    justify-content: center;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 2.5dvw;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 27dvw;
-    height: 30dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .imagewrap{
-    background-color: gray;
-    width: 23dvw;
-    height: 21dvh;
-    border-radius: 2.5dvw;
-  }
+.grid {
+  padding: 3dvh 1dvw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2dvw;
+  justify-content: center;
+}
 
-  .info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
+.card {
+  background-color: white;
+  border-radius: 2.5dvw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 27dvw;
+  height: 30dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
 
-  .infoname{
-    font-size: 2.2dvw;
-    font-weight: bold;
-  }
+.imagewrap{
+  width: 23dvw;
+  height: 21dvh;
+  border-radius: 2.5dvw;
+  overflow: hidden; /* 이미지가 컨테이너를 벗어나지 않도록 설정 */
+}
 
-  .infoprice{
-    background-color: #E2B281;
-    border-radius: 2.5dvw;
-    width: 18dvw;
-    height: 3dvh;
-    margin-top: 2dvh;
-    font-size: 2dvw;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 컨테이너에 맞게 조절되도록 설정 */
+  border-radius: 2.5dvw; /* 부모 컨테이너의 border-radius와 일치시키기 위해 */
+}
 
-  .card.large {
-    width: 56dvw;
-    height: 30dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
-  .bigimagewrap{
-    background-color: gray;
-    width: 50dvw;
-    height: 21dvh;
-    border-radius: 2.5dvw;
-  }
+.infoname{
+  font-size: 2.2dvw;
+  font-weight: bold;
+}
 
-  .biginfo{
-    display: flex;
-    justify-content: space-between;
-    gap: 2dvw;
-    height: 5dvh;
-  }
+.infoprice{
+  background-color: #E2B281;
+  border-radius: 2.5dvw;
+  width: 18dvw;
+  height: 3dvh;
+  margin-top: 2dvh;
+  font-size: 2dvw;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .biginfoname{
-    text-align: left;
-    width: 24dvw;
-    height: 8dvh;
-    margin-right: 3dvw;
-    font-size: 2.8dvw;
-    font-weight: bold;
-  }
+.card.large {
+  width: 56dvw;
+  height: 30dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
-  .biginfoprice{
-    background-color: #E2B281;
-    border-radius: 2.5dvw;
-    width: 18dvw;
-    height: 3dvh;
-    margin-top: 1dvh;
-    font-size: 2dvw;
-    font-weight: bold;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.bigimagewrap{
+  background-color: gray;
+  width: 50dvw;
+  height: 21dvh;
+  border-radius: 2.5dvw;
+  overflow: hidden; /* 이미지가 컨테이너를 벗어나지 않도록 설정 */
+}
+
+.bigimage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 컨테이너에 맞게 조절되도록 설정 */
+  border-radius: 2.5dvw; /* 부모 컨테이너의 border-radius와 일치시키기 위해 */
+}
+
+.biginfo{
+  display: flex;
+  justify-content: space-between;
+  gap: 2dvw;
+  height: 5dvh;
+}
+
+.biginfoname{
+  text-align: left;
+  width: 24dvw;
+  height: 8dvh;
+  margin-right: 3dvw;
+  font-size: 2.8dvw;
+  font-weight: bold;
+}
+
+.biginfoprice{
+  background-color: #E2B281;
+  border-radius: 2.5dvw;
+  width: 18dvw;
+  height: 3dvh;
+  margin-top: 1dvh;
+  font-size: 2dvw;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 
