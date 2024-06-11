@@ -140,3 +140,74 @@ export const updateMenu = async (
     throw error;
   }
 };
+
+export const getOptions = async (category_id: number) => {
+  try {
+    const response = await apiClient.get(
+      `/api/categories/${category_id}/options/`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Failed to get options:", error);
+    throw error;
+  }
+};
+
+export const postOptions = async (
+  category_id: number,
+  option_name: string,
+  choices: { choice_name: string; extra_cost: number }[]
+) => {
+  try {
+    const response = await apiClient.post(
+      `/api/categories/${category_id}/options/`,
+      {
+        option_name,
+        choices,
+      }
+    );
+    alert("옵션이 추가되었습니다 !");
+    return response.data;
+  } catch (error) {
+    alert("옵션 추가에 실패했습니다. 다시 시도해주세요.");
+    console.error("옵션 추가 실패: ", error);
+    throw error;
+  }
+};
+
+export const deleteOptions = async (category_id: number, option_id: number) => {
+  try {
+    const response = await apiClient.post(
+      `/api/categories/${category_id}/options/${option_id}/delete/`
+    );
+    alert("옵션이 삭제되었습니다 !");
+    return response.data;
+  } catch (error) {
+    alert("옵션 삭제에 실패했습니다. 다시 시도해주세요.");
+    console.error("옵션 삭제 실패: ", error);
+    throw error;
+  }
+};
+
+export const updateOptions = async (
+  category_id: number,
+  option_id: number,
+  option_name: string,
+  choices: { choice_id: number; choice_name: string; extra_cost: number }[]
+) => {
+  try {
+    const response = await apiClient.patch(
+      `/api/categories/${category_id}/options/${option_id}/`,
+      {
+        option_name,
+        choices,
+      }
+    );
+    alert("옵션이 수정되었습니다 !");
+    return response.data;
+  } catch (error) {
+    alert("옵션 수정에 실패했습니다. 다시 시도해주세요.");
+    console.error("옵션 수정 실패: ", error);
+    throw error;
+  }
+};
