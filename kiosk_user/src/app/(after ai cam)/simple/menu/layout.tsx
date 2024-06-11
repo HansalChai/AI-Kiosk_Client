@@ -6,6 +6,7 @@ import Link from "next/link";
 import homeIcon from "@/../public/home-icon.png"
 import logo from "@/../public/logo.png"
 import NavMenu from "./_componenets/NavMenu";
+import FooterMenu from "./_componenets/FooterMenu";
 
 
 export default async function SimpleLayout({children} : {children : ReactNode}){
@@ -29,13 +30,8 @@ export default async function SimpleLayout({children} : {children : ReactNode}){
             {children}
           </div>
 
-          <div className={styles.footer}>
-              <div className={styles.summary}>담은 음식</div>
-              <div className={styles.summaryCount}>2</div>
-              <div className={styles.summary}>총 금액</div>
-              <div className={styles.summaryPrice}>10,700원</div>              
-              <Link href="/simple/cart" className={styles.orderButton}>주문</Link>
-          </div>
+          <FooterMenu/>
+          
       </div>
     </div>
   )

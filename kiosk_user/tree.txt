@@ -10,6 +10,37 @@
 │   ├── TrashCanIcon.svg
 │   ├── UpdateIcon.svg
 │   ├── cardinsert.svg
+│   ├── dummyImg
+│   │   ├── beverage1.jpeg
+│   │   ├── beverage2.svg
+│   │   ├── beverage3.svg
+│   │   ├── beverage4.jpeg
+│   │   ├── beverage5.jpeg
+│   │   ├── bread1.jpeg
+│   │   ├── bread2.jpeg
+│   │   ├── bread3.jpeg
+│   │   ├── bread4.jpeg
+│   │   ├── bread5.jpeg
+│   │   ├── cake1.svg
+│   │   ├── cake2.svg
+│   │   ├── cake3.jpeg
+│   │   ├── cake4.jpeg
+│   │   ├── cake5.jpeg
+│   │   ├── coffee1.svg
+│   │   ├── coffee10.jpeg
+│   │   ├── coffee2.svg
+│   │   ├── coffee3.svg
+│   │   ├── coffee4.jpg
+│   │   ├── coffee5.jpg
+│   │   ├── coffee6.jpeg
+│   │   ├── coffee7.jpeg
+│   │   ├── coffee8.jpeg
+│   │   ├── coffee9.jpeg
+│   │   ├── tea1.jpeg
+│   │   ├── tea2.jpeg
+│   │   ├── tea3.jpeg
+│   │   ├── tea4.jpeg
+│   │   └── tea5.jpeg
 │   ├── eatin.svg
 │   ├── fonts
 │   │   ├── NanumSquareOTF_acB.otf
@@ -22,12 +53,6 @@
 │   ├── logo.png
 │   ├── next.svg
 │   ├── receipt.svg
-│   ├── sample
-│   │   ├── coffee1.svg
-│   │   ├── coffee2.svg
-│   │   ├── coffee3.svg
-│   │   ├── coffee4.svg
-│   │   └── coffee5.svg
 │   ├── star.png
 │   ├── togo.svg
 │   └── vercel.svg
@@ -36,97 +61,115 @@
 │   │   ├── apiClient.ts
 │   │   ├── auth.ts
 │   │   └── owner.ts
-│   └── app
-│       ├── (after ai cam)
-│       │   ├── complex
-│       │   │   ├── cart
-│       │   │   │   ├── page.module.css
-│       │   │   │   └── page.tsx
-│       │   │   ├── item
-│       │   │   │   └── [itemname]
-│       │   │   │       ├── page.module.css
-│       │   │   │       └── page.tsx
-│       │   │   ├── menu
-│       │   │   │   ├── _components
-│       │   │   │   │   ├── NavMenu.tsx
-│       │   │   │   │   └── navMenu.module.css
-│       │   │   │   ├── beverage
-│       │   │   │   │   ├── page.module.css
-│       │   │   │   │   └── page.tsx
-│       │   │   │   ├── bread
-│       │   │   │   │   ├── page.module.css
-│       │   │   │   │   └── page.tsx
-│       │   │   │   ├── cafe
-│       │   │   │   │   ├── page.module.css
-│       │   │   │   │   └── page.tsx
-│       │   │   │   ├── cake
-│       │   │   │   │   ├── page.module.css
-│       │   │   │   │   └── page.tsx
-│       │   │   │   ├── layout.module.css
-│       │   │   │   ├── layout.tsx
-│       │   │   │   ├── recommend
-│       │   │   │   │   ├── page.module.css
-│       │   │   │   │   └── page.tsx
-│       │   │   │   └── tea
-│       │   │   │       ├── page.module.css
-│       │   │   │       └── page.tsx
-│       │   │   └── pay
-│       │   │       ├── complete
-│       │   │       │   ├── page.module.css
-│       │   │       │   └── page.tsx
-│       │   │       ├── creditcard
-│       │   │       │   ├── page.module.css
-│       │   │       │   └── page.tsx
-│       │   │       ├── page.module.css
-│       │   │       └── page.tsx
-│       │   └── simple
-│       │       ├── cart
-│       │       │   ├── page.module.css
-│       │       │   └── page.tsx
-│       │       ├── item
-│       │       │   └── [itemname]
-│       │       │       ├── page.module.css
-│       │       │       └── page.tsx
-│       │       ├── menu
-│       │       │   ├── [category]
-│       │       │   │   ├── page.module.css
-│       │       │   │   └── page.tsx
-│       │       │   ├── _componenets
-│       │       │   │   ├── NavMenu.tsx
-│       │       │   │   └── navMenu.module.css
-│       │       │   ├── layout.module.css
-│       │       │   └── layout.tsx
-│       │       └── pay
-│       │           ├── complete
-│       │           │   ├── page.module.css
-│       │           │   └── page.tsx
-│       │           ├── creditcard
-│       │           │   ├── page.module.css
-│       │           │   └── page.tsx
-│       │           ├── page.module.css
-│       │           └── page.tsx
-│       ├── (before ai cam)
-│       │   └── home
-│       │       ├── page.module.css
-│       │       ├── page.tsx
-│       │       └── webcamCapture.tsx
-│       ├── admin
-│       │   ├── category
-│       │   │   └── page.tsx
-│       │   ├── home
-│       │   │   └── page.tsx
-│       │   ├── main
-│       │   │   └── page.tsx
-│       │   └── mode
-│       │       └── page.tsx
-│       ├── favicon.ico
-│       ├── globals.css
-│       ├── layout.tsx
-│       ├── not-found.tsx
-│       ├── page.module.css
-│       └── page.tsx
+│   ├── app
+│   │   ├── (after ai cam)
+│   │   │   ├── complex
+│   │   │   │   ├── cart
+│   │   │   │   │   ├── page.module.css
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── item
+│   │   │   │   │   └── [itemname]
+│   │   │   │   │       ├── page.module.css
+│   │   │   │   │       └── page.tsx
+│   │   │   │   ├── menu
+│   │   │   │   │   ├── _components
+│   │   │   │   │   │   ├── FooterCart.tsx
+│   │   │   │   │   │   ├── NavMenu.tsx
+│   │   │   │   │   │   ├── footerCart.module.css
+│   │   │   │   │   │   └── navMenu.module.css
+│   │   │   │   │   ├── beverage
+│   │   │   │   │   │   ├── page.module.css
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── bread
+│   │   │   │   │   │   ├── page.module.css
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── cafe
+│   │   │   │   │   │   ├── page.module.css
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── cake
+│   │   │   │   │   │   ├── page.module.css
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   ├── layout.module.css
+│   │   │   │   │   ├── layout.tsx
+│   │   │   │   │   ├── recommend
+│   │   │   │   │   │   ├── page.module.css
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── tea
+│   │   │   │   │       ├── page.module.css
+│   │   │   │   │       └── page.tsx
+│   │   │   │   └── pay
+│   │   │   │       ├── complete
+│   │   │   │       │   ├── page.module.css
+│   │   │   │       │   └── page.tsx
+│   │   │   │       ├── creditcard
+│   │   │   │       │   ├── page.module.css
+│   │   │   │       │   └── page.tsx
+│   │   │   │       ├── page.module.css
+│   │   │   │       └── page.tsx
+│   │   │   └── simple
+│   │   │       ├── cart
+│   │   │       │   ├── page.module.css
+│   │   │       │   └── page.tsx
+│   │   │       ├── item
+│   │   │       │   └── [itemname]
+│   │   │       │       ├── page.module.css
+│   │   │       │       └── page.tsx
+│   │   │       ├── menu
+│   │   │       │   ├── [category]
+│   │   │       │   │   ├── page.module.css
+│   │   │       │   │   └── page.tsx
+│   │   │       │   ├── _componenets
+│   │   │       │   │   ├── NavMenu.tsx
+│   │   │       │   │   └── navMenu.module.css
+│   │   │       │   ├── layout.module.css
+│   │   │       │   └── layout.tsx
+│   │   │       └── pay
+│   │   │           ├── complete
+│   │   │           │   ├── page.module.css
+│   │   │           │   └── page.tsx
+│   │   │           ├── creditcard
+│   │   │           │   ├── page.module.css
+│   │   │           │   └── page.tsx
+│   │   │           ├── page.module.css
+│   │   │           └── page.tsx
+│   │   ├── (before ai cam)
+│   │   │   └── home
+│   │   │       ├── page.module.css
+│   │   │       ├── page.tsx
+│   │   │       └── webcamCapture.tsx
+│   │   ├── admin
+│   │   │   ├── category
+│   │   │   │   └── page.tsx
+│   │   │   ├── home
+│   │   │   │   └── page.tsx
+│   │   │   ├── main
+│   │   │   │   └── page.tsx
+│   │   │   └── mode
+│   │   │       └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   ├── page.module.css
+│   │   └── page.tsx
+│   ├── data
+│   │   ├── complex
+│   │   │   ├── dummyComplexBeverage.ts
+│   │   │   ├── dummyComplexBread.ts
+│   │   │   ├── dummyComplexCafe.ts
+│   │   │   ├── dummyComplexCake.ts
+│   │   │   ├── dummyComplexRecommend.ts
+│   │   │   └── dummyComplexTea.ts
+│   │   ├── dummyItems.ts
+│   │   └── simple
+│   │       ├── dummySimpleBeverage.ts
+│   │       ├── dummySimpleBread.ts
+│   │       ├── dummySimpleCafe.ts
+│   │       └── dummySimpleRecommend.ts
+│   └── store
+│       └── cartStore.ts
 ├── tree.txt
 ├── tsconfig.json
 └── yarn.lock
 
-40 directories, 90 files
+44 directories, 129 files

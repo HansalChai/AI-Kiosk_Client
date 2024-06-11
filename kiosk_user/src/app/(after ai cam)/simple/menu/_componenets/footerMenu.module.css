@@ -1,0 +1,47 @@
+  
+  .footer {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6F6F6;
+    color: #504C45;
+  }
+  
+  .summary {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    height: 215px;
+  }
+  
+  .summaryCount {
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    height: 215px;
+  }
+  
+  .summaryPrice {
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+    height: 215px;
+  }
+  
+  .orderButton {
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    background-color: #4F7E68;
+    color: #F6F6F6;
+    font-size: 70px;
+    width: 200px;
+    height: 215px;
+  }
+  
+  .orderButton:hover {
+    background-color: #0E492D;
+  }
+  

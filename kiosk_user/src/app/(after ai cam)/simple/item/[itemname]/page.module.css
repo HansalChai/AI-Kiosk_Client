@@ -9,6 +9,16 @@
     align-items: stretch;
   }
   
+  .gobackLink {
+    width: 8dvw;
+  }
+
+  .goback {
+    padding-left: 30px;
+    width: 8dvw;
+    height: 8dvw;
+  }
+
   .header {
     display: flex;
     font-size: 90px;

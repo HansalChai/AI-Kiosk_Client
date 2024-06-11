@@ -1,26 +1,30 @@
+// src/app/(after ai cam)/simple/pay/complete/page.tsx
+
 "use client";
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./page.module.css";
 
-import receipt from "@/../public/receipt.svg"
+import receipt from "@/../public/receipt.svg";
+import useCartStore from "@/store/cartStore";
 
 export default function Complex() {
 
   const router = useRouter();
+  const clearItems = useCartStore((state) => state.clearItems);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const timer = setTimeout(() => {
-        router.push('/simple/menu/recommend'); // 이동하고자 하는 페이지 경로
-      }, 2000); // 2초 후에 이동
+        clearItems(); // 모든 항목 제거
+        router.push('/home'); // 이동하고자 하는 페이지 경로
+      }, 5000); // 5초 후에 이동
       return () => clearTimeout(timer); // 컴포넌트가 언마운트될 때 타이머를 정리합니다.
     }
-  }, [router]);
+  }, [router, clearItems]);
 
   return (
     <div className={styles.container}>
