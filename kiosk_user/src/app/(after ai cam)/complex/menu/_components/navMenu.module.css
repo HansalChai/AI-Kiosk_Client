@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav .lk {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 4dvw;
+  }

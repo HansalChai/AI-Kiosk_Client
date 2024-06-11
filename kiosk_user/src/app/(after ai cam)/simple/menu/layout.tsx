@@ -5,13 +5,14 @@ import Link from "next/link";
 
 import homeIcon from "@/../public/home-icon.png"
 import logo from "@/../public/logo.png"
-import star from "@/../public/star.png"
+import NavMenu from "./_componenets/NavMenu";
 
 
 export default async function SimpleLayout({children} : {children : ReactNode}){
   return(
     <div className={styles.main}>
       <div className={styles.container}>
+          
           <div className={styles.header}>
               <Link href='/home' className={styles.homeButton}>
                   <Image src={homeIcon} alt="home"/>
@@ -21,15 +22,8 @@ export default async function SimpleLayout({children} : {children : ReactNode}){
                   <Image src={logo} alt="logo"/>
               </div>
           </div>
-          <div className={styles.navigation}>
-              <div className={styles.navButton}>
-                <Image src={star} alt="star"/>
-                <div>추천</div>
-              </div>
-              <div className={styles.navButton}>커피</div>
-              <div className={styles.navButton}>음료</div>
-              <div className={styles.navButton}>빵</div>
-          </div>
+
+          <NavMenu/>
           
           <div className={styles.mainContent}>
             {children}
