@@ -146,6 +146,7 @@ export const getOptions = async (category_id: number) => {
     const response = await apiClient.get(
       `/api/categories/${category_id}/options/`
     );
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error("Failed to get options:", error);
@@ -162,8 +163,12 @@ export const postOptions = async (
     const response = await apiClient.post(
       `/api/categories/${category_id}/options/`,
       {
-        option_name,
-        choices,
+        options: [
+          {
+            option_name,
+            choices,
+          },
+        ],
       }
     );
     alert("옵션이 추가되었습니다 !");
@@ -193,7 +198,7 @@ export const updateOptions = async (
   category_id: number,
   option_id: number,
   option_name: string,
-  choices: { choice_id: number; choice_name: string; extra_cost: number }[]
+  choices: { id: number; choice_name: string; extra_cost: number }[]
 ) => {
   try {
     const response = await apiClient.patch(

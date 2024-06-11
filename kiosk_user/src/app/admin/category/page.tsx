@@ -85,6 +85,15 @@ const AdminCategory = () => {
     );
   };
 
+  const handleOptionsManagement = (
+    categoryId: number,
+    categoryName: string
+  ) => {
+    router.push(
+      `/admin/options?category_id=${categoryId}&category_name=${categoryName}`
+    );
+  };
+
   return (
     <Container>
       <Header onClick={() => router.push("/admin/main/")}>
@@ -134,6 +143,13 @@ const AdminCategory = () => {
                 >
                   메뉴 관리
                 </MenuButton>
+                <MenuButton
+                  onClick={() =>
+                    handleOptionsManagement(cat.id, cat.category_name)
+                  }
+                >
+                  옵션 관리
+                </MenuButton>
               </ButtonContainer>
             </CategoryItem>
           ))
@@ -176,7 +192,7 @@ const Container = styled.div`
 const CategoryItem = styled.div<{ isFirst: boolean }>`
   display: flex;
   align-items: center;
-  width: 240px;
+  width: 280px;
   justify-content: space-between;
   height: 50px;
   padding: 5px;
@@ -195,7 +211,7 @@ const Input = styled.input`
 
 const CategoryUpdateInput = styled.input`
   padding: 10px;
-  width: 70px;
+  width: 50px;
   border: 1px solid #ccc;
   border-radius: 5px;
 `;
@@ -240,9 +256,9 @@ const UpdateButton = styled.div`
 
 const SubmitButton = styled.button`
   margin-left: 10px;
-  padding: 10px 10px;
-  background-color: #d9d9d9;
-  color: #000000;
+  padding: 6px;
+  background-color: #000000;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -261,7 +277,7 @@ const CategoryList = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  width: 320px;
+  width: 330px;
   height: 560px;
   overflow-y: auto;
   background-color: #fff;
