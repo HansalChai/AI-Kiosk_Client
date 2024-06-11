@@ -216,3 +216,18 @@ export const updateOptions = async (
     throw error;
   }
 };
+
+export const getOrderAmount = async (age_range: string) => {
+  try {
+    const response = await apiClient.get(`/api/order/order_amount/`, {
+      params: {
+        age_range,
+      },
+    });
+    console.log("Order amount:", response.data);
+    return response.data;
+  } catch (error) {
+    console.error("Failed to get order amount:", error);
+    throw error;
+  }
+};

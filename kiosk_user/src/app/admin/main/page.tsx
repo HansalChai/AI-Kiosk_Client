@@ -65,12 +65,12 @@ const AdminMain = () => {
             <Link href="/admin/category">표시 카테고리 및 메뉴 설정</Link>
           </Button>
           <Button style={{ background: "#0E492D" }}>
-            <Link href="/admin/logout">추천 메뉴 설정 및 조회</Link>
+            <Link href="/admin/amount">추천 메뉴 설정 및 조회</Link>
           </Button>
         </ButtonBox>
         <ButtonBox>
           <Button style={{ background: "#5AA381" }}>
-            <Link href="/admin/owner">매출 조회</Link>
+            <Link href="/admin/amount">매출 조회</Link>
           </Button>
           <Button style={{ background: "#5AA381" }}>
             <Link href="/admin/owner">멤버십 관리</Link>
