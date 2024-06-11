@@ -30,13 +30,13 @@ export default function Complex() {
               <span>1</span>
               <button>+</button>
             </div>
-            <div className={styles.price}>{item.price}원</div>
+            <div className={styles.price}>{item.price.toLocaleString()}원</div>
           </div>
         ))}
 
         <div className={styles.orderSummary}>
           <div>총 수량: {items.length}</div>
-          <div>주문금액: {items.reduce((total, item) => total + item.price, 0)}원</div>
+          <div>주문금액: {items.reduce((total, item) => total + item.price, 0).toLocaleString()}원</div>
         </div>
 
         <div className={styles.orderActions}>
