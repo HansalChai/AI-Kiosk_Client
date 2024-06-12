@@ -15,7 +15,13 @@ const ComplexMenus = () => {
     const fetchCategories = async () => {
       try {
         const response = await getCategory();
-        const categoryArray = response.categories;
+        let categoryArray = response.categories;
+
+        if (categoryArray && categoryArray.length > 5) {
+          const fifthIndexCategory = categoryArray.splice(5, 1)[0];
+          categoryArray = [fifthIndexCategory, ...categoryArray];
+        }
+
         setCategories(categoryArray || []);
         if (categoryArray && categoryArray.length > 0) {
           setSelectedCategoryId(categoryArray[0].id);
@@ -82,7 +88,7 @@ const ComplexMenus = () => {
           </div>
           <Tabs>
             {Array.isArray(categories) &&
-              categories.map((category) => (
+              categories.map((category, index) => (
                 <Tab
                   key={category.id}
                   isActive={category.id === selectedCategoryId}
@@ -190,9 +196,9 @@ const BackButton = styled.div`
   font-size: 50px;
   cursor: pointer;
   padding: 10px;
-  margin-left: 10px;
+  margin: 10px;
   width: 35px;
-  height: 35px;
+  height: 37px;
 `;
 
 const Tabs = styled.div`
@@ -206,9 +212,9 @@ const Tabs = styled.div`
 const Tab = styled.button`
   background: none;
   border: none;
-  font-size: 45px;
+  font-size: ${(props) => (props.isActive ? "52px" : "48px")};
   font-weight: ${(props) => (props.isActive ? "bold" : "normal")};
-  color: ${(props) => (props.isActive ? "#0E492D" : "#888")};
+  color: ${(props) => (props.isActive ? "#0E492D" : "#1C161E")};
   cursor: pointer;
 `;
 
