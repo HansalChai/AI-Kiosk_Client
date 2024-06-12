@@ -200,16 +200,16 @@ const AdminOptions = () => {
         ) : (
           <div
             style={{
-              width: "100%",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              textAlign: "center",
-              color: "#666",
+              width: "100%",
+              height: "100%",
+              color: "#ccc",
+              marginTop: "10px",
             }}
           >
-            옵션이 존재하지 않습니다! 옵션을 추가하고 싶으시다면 새로운 옵션을
-            아래에서 추가해주세요.
+            옵션이 존재하지 않습니다!
           </div>
         )}
       </OptionList>
@@ -269,7 +269,6 @@ const OptionList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-top: 50px;
   width: 320px;
   height: 560px;
@@ -365,7 +364,6 @@ const OptionInputDiv = styled.div`
   display: flex;
   background-color: #ffffff;
   flex-direction: column;
-  justify-content: center;
   align-items: left;
   padding: 10px;
   margin-top: 20px;
@@ -404,16 +402,3 @@ const OptionListHeaderRound = styled.div`
   background-color: #5aa381;
   opacity: 0.8;
 `;
-
-{
-  /* <div
-style={{
-  width: "100%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  textAlign: "center",
-  color: "#666",
-}}
-> */
-}

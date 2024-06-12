@@ -154,9 +154,18 @@ const AdminCategory = () => {
             </CategoryItem>
           ))
         ) : (
-          <div>
-            카테고리가 존재하지 않습니다! 카테고리 관리를 하고 싶으시다면 새로운
-            카테고리를 아래에서 추가해주세요.
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              color: "#ccc",
+              marginTop: "10px",
+            }}
+          >
+            카테고리가 존재하지 않습니다!
           </div>
         )}
       </CategoryList>
@@ -275,7 +284,6 @@ const CategoryList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-top: 50px;
   width: 330px;
   height: 560px;

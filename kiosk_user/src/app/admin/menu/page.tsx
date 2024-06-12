@@ -167,9 +167,18 @@ const AdminMenu = () => {
             </MenuItem>
           ))
         ) : (
-          <div>
-            메뉴가 존재하지 않습니다! 메뉴 관리를 하고 싶으시다면 새로운 메뉴를
-            아래에서 추가해주세요.
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "100%",
+              color: "#ccc",
+              marginTop: "10px",
+            }}
+          >
+            메뉴가 존재하지 않습니다!
           </div>
         )}
       </MenuList>
@@ -321,11 +330,10 @@ const MenuList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-top: 50px;
   width: 320px;
   height: 560px;
-  overflow-y: auto;
+  overflow: scroll;
   background-color: #fff;
   padding: 10px;
 `;
