@@ -49,6 +49,7 @@ export default function Home() {
             src={dineInIcon}
             alt="매장에서 먹고가기"
             className={styles.homeicon}
+            onClick={() => router.push("/complex/menus")}
           />
         </div>
         <div className={styles.text1}>매장에서</div>
