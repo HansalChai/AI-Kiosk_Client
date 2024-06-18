@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function NavMenu() {
 
     const segment = useSelectedLayoutSegment();
-    console.log(segment);
+    // console.log(segment);
 
     return(
         <div className={styles.nav}>

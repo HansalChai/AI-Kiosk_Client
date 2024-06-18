@@ -19,7 +19,7 @@ export default function Home() {
     setUploadResponse(response);
     setIsLoading(false);
 
-    if (response.age === "48-53" || response.age === "60-100") {
+    if ( response.age == "38-43" || response.age === "48-53" || response.age === "60-100") {
       router.push("/simple/menu/recommend");
     } else {
       router.push("/complex/menu/recommend");
@@ -46,10 +46,11 @@ export default function Home() {
       <div className={styles.option} id={styles.dineIn} onClick={handleClick}>
         <div className={styles.icon}>
           <Image
+
             src={dineInIcon}
             alt="매장에서 먹고가기"
             className={styles.homeicon}
-            onClick={() => router.push("/complex/menus")}
+            priority
           />
         </div>
         <div className={styles.text1}>매장에서</div>
